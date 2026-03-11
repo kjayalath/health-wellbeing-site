@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & Well-Being</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+    .overlay { background: rgba(0,0,0,0.4); }
+    .card:hover { transform: scale(1.05); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Hero Section with background image -->
+  <section class="relative min-h-screen flex items-center justify-center text-center">
+    <img src="https://source.unsplash.com/1600x900/?nature,wellbeing" class="absolute inset-0 w-full h-full object-cover">
+    <div class="overlay absolute inset-0"></div>
+    <div class="relative z-10" data-aos="fade-up">
+      <h1 class="text-5xl font-bold text-white mb-4">Health & Well-Being</h1>
+      <p class="text-xl max-w-xl mx-auto text-white">Mind, body, and soul resources. Explore each section as you scroll.</p>
+    </div>
+  </section>
+
+  <!-- Emotional Health with cards -->
+  <section class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-6 py-20">
+    <h2 class="text-4xl font-semibold mb-12" data-aos="fade-right">Emotional Health</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl">
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up">Mindfulness Exercises</div>
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up" data-aos-delay="100">Meditation Tips</div>
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up" data-aos-delay="200">Stress Management</div>
+    </div>
+  </section>
+
+  <!-- Physical Fitness with background video -->
+  <section class="relative min-h-screen flex items-center justify-center text-center">
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <div class="overlay absolute inset-0"></div>
+    <div class="relative z-10" data-aos="fade-left">
+      <h2 class="text-4xl font-semibold text-white mb-6">Physical Fitness</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Home Workouts</div>
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Yoga & Stretching</div>
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Outdoor Activities</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nutrition with background image -->
+  <section class="relative min-h-screen flex items-center justify-center text-center">
+    <img src="https://source.unsplash.com/1600x900/?healthy-food" class="absolute inset-0 w-full h-full object-cover">
+    <div class="overlay absolute inset-0"></div>
+    <div class="relative z-10" data-aos="fade-up">
+      <h2 class="text-4xl font-semibold text-white mb-6">Nutrition & Diet</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Healthy Recipes</div>
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Vitamins & Supplements</div>
+        <div class="card p-6 rounded-xl shadow-lg bg-white">Hydration Tips</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social & Cultural Well-being -->
+  <section class="min-h-screen bg-green-50 flex flex-col items-center justify-center px-6 py-20">
+    <h2 class="text-4xl font-semibold mb-12" data-aos="fade-right">Social & Cultural Well-Being</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl">
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up">Community Activities</div>
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up" data-aos-delay="100">Cultural Connections</div>
+      <div class="card p-6 rounded-xl shadow-lg bg-white" data-aos="fade-up" data-aos-delay="200">Social Support Tips</div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-6 py-20">
+    <h2 class="text-4xl font-semibold mb-4" data-aos="zoom-in">Stay Healthy & Connected</h2>
+    <p class="text-lg mb-6" data-aos="zoom-in" data-aos-delay="100">
+      Subscribe to our newsletter or explore more resources for your well-being.
+    </p>
+    <button class="px-6 py-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition" data-aos="zoom-in" data-aos-delay="200">
+      Learn More
+    </button>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
