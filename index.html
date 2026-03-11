@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuruppu Jayalath - Health & Well-Being Portal</title>
 
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f7f6;
+}
+
+/* Header */
+
+header{
+    text-align:center;
+    background:#2c7a7b;
+    color:white;
+    padding:12px;
+    font-size:20px;
+}
+
+/* Loading screen */
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:1000;
+}
+
+.spinner{
+    border:6px solid #f3f3f3;
+    border-top:6px solid #2c7a7b;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+#frameContainer{
+    width:100%;
+    height:calc(100vh - 48px);
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* Fallback */
+
+#fallback{
+    display:none;
+    text-align:center;
+    padding:40px;
+}
+
+button{
+    padding:12px 20px;
+    font-size:16px;
+    background:#2c7a7b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#225e60;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Health & Well-Being Portal
+</header>
+
+<!-- Loading Screen -->
+
+<div id="loader">
+<div class="spinner"></div>
+<p>Loading website...</p>
+</div>
+
+<!-- Website Frame -->
+
+<div id="frameContainer">
+<iframe
+    id="siteFrame"
+    src="https://serene-life-forge.lovable.app/"
+    onload="hideLoader()">
+</iframe>
+</div>
+
+<!-- Fallback -->
+
+<div id="fallback">
+<h2>Unable to display the website in this frame</h2>
+<p>Your browser or the website may block embedded pages.</p>
+
+<a href="https://serene-life-forge.lovable.app/" target="_blank">
+<button>Open Website</button>
+</a>
+</div>
+
+<script>
+
+function hideLoader(){
+    document.getElementById("loader").style.display="none";
+}
+
+/* If iframe blocked show fallback */
+
+setTimeout(function(){
+
+let frame=document.getElementById("siteFrame");
+
+try{
+    let test=frame.contentWindow.location.href;
+}catch(e){
+
+document.getElementById("loader").style.display="none";
+document.getElementById("frameContainer").style.display="none";
+document.getElementById("fallback").style.display="block";
+
+}
+
+},4000);
+
+</script>
+
+</body>
+</html>
